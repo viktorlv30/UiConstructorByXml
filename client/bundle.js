@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "cb58bd83b074646a97e2"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "afc03b7971d1685fd70f"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -30192,8 +30192,22 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _Window = __webpack_require__(269);
+
+	var _Window2 = _interopRequireDefault(_Window);
+
+	var _FactoryComponent = __webpack_require__(272);
+
+	var _FactoryComponent2 = _interopRequireDefault(_FactoryComponent);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var factory = new _FactoryComponent2.default();
+	// const Component = factory.createComponent('window');
+
+	/**
+	 * Created by v.litvak on 10.01.2017.
+	 */
 	exports.default = _react2.default.createClass({
 	    displayName: 'App',
 
@@ -30201,12 +30215,11 @@
 	        return _react2.default.createElement(
 	            'div',
 	            null,
-	            'Hello, this is UI builder from XML'
+	            'Hello, this is UI builder from XML',
+	            _react2.default.createElement(_Window2.default, null)
 	        );
 	    }
-	}); /**
-	     * Created by v.litvak on 10.01.2017.
-	     */
+	});
 
 	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(266); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "App.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
@@ -30337,6 +30350,180 @@
 	}
 
 	module.exports = isReactElementish;
+
+/***/ },
+/* 269 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(174);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _FactoryComponent = __webpack_require__(272);
+
+	var _FactoryComponent2 = _interopRequireDefault(_FactoryComponent);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	 * Created by v.litvak on 10.01.2017.
+	 */
+	var factory = new _FactoryComponent2.default();
+	// import Container from './Container';
+	// import Button from './Button';
+
+	var Container = factory.createComponent('container');
+	var Button = factory.createComponent('button');
+
+	exports.default = _react2.default.createClass({
+	    displayName: 'Window',
+
+	    render: function render() {
+	        return _react2.default.createElement(
+	            'div',
+	            null,
+	            'THIS IS WINDOW COMPONENT',
+	            _react2.default.createElement(Container, null),
+	            _react2.default.createElement(Button, null)
+	        );
+	    }
+	});
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(266); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Window.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
+
+/***/ },
+/* 270 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(174);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	    displayName: 'Container',
+
+	    render: function render() {
+	        return _react2.default.createElement(
+	            'div',
+	            null,
+	            'THIS is CONTAINER DIV'
+	        );
+	    }
+	}); /**
+	     * Created by v.litvak on 10.01.2017.
+	     */
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(266); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Container.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
+
+/***/ },
+/* 271 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(174);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	    displayName: 'Button',
+
+	    render: function render() {
+	        return _react2.default.createElement(
+	            'div',
+	            null,
+	            'This is a BUTTON DIV'
+	        );
+	    }
+	}); /**
+	     * Created by v.litvak on 10.01.2017.
+	     */
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(266); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Button.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
+
+/***/ },
+/* 272 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = factory;
+
+	var _Window = __webpack_require__(269);
+
+	var _Window2 = _interopRequireDefault(_Window);
+
+	var _Container = __webpack_require__(270);
+
+	var _Container2 = _interopRequireDefault(_Container);
+
+	var _Button = __webpack_require__(271);
+
+	var _Button2 = _interopRequireDefault(_Button);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var defaultComponent = {}; /**
+	                            * Created by v.litvak on 10.01.2017.
+	                            */
+	function factory() {
+	    this.createComponent = function (type) {
+	        var component = void 0;
+
+	        switch (type) {
+	            case 'window':
+	                component = _Window2.default;
+	                break;
+	            case 'container':
+	                component = _Container2.default;
+	                break;
+	            case 'button':
+	                component = _Button2.default;
+	                break;
+	            default:
+	                component = defaultComponent;
+	        }
+
+	        return component;
+	    };
+	}
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(266); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "FactoryComponent.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
 
 /***/ }
 /******/ ]);

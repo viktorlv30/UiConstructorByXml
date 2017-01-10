@@ -1,21 +1,25 @@
 /**
  * Created by v.litvak on 10.01.2017.
  */
+import Window from '../ui/components/Window';
+import Container from '../ui/components/Container';
+import Button from '../ui/components/Button';
+
 const defaultComponent = {};
 
-function Factory(){
+export default function factory(){
     this.createComponent = function (type) {
         let component;
 
         switch (type) {
             case 'window':
-                component = new Window();
+                component = Window;
                 break;
             case 'container':
-                component = new Container();
+                component = Container;
                 break;
             case 'button':
-                component = new Button();
+                component = Button;
                 break;
             default: component = defaultComponent;
         }
