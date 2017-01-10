@@ -19,7 +19,7 @@
         </action>
         <children>
             <style>
-                <selector search=".displayContainer">
+                <selector search=".container">
                     <value name="top">0</value>
                     <value name="left">0</value>
                     <value name="width">150</value>
@@ -34,7 +34,7 @@
                     <value name="color">#000</value>
                 </selector>
             </style>
-            <component type="displayContainer" title="scaleData">
+            <component type="container" title="scaleData">
                 <args>
                     <classes>
                         <class>displayContainer</class>

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "parse": "node services/xmlParser.jsx config/mainWindowConfig.xml",
-    "start": "babel-node index.js"
+    "client": "node ./node_modules/webpack/bin/webpack.js --debug --progress --colors --watch"
   },
   "author": "v.litvak",
   "license": "ISC",

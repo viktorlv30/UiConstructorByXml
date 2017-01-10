@@ -26,7 +26,7 @@ module.exports = {
     },
     devServer: {
         contentBase: './client',
-        hot: true
+        hot: false
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin()
