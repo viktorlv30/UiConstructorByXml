@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<window>
+    <style>
+        <selector search=".window">
+            <value name="top">0</value>
+            <value name="left">0</value>
+            <value name="width">800</value>
+            <value name="height">600</value>
+        </selector>
+    </style>
+    <component type="window" title="mainWindow">
+        <args>
+            <classes>
+                <class>window</class>
+            </classes>
+        </args>
+        <action>
+            <onLeftDown>LeftDown_onClick</onLeftDown>
+        </action>
+        <children>
+            <style>
+                <selector search=".displayContainer">
+                    <value name="top">0</value>
+                    <value name="left">0</value>
+                    <value name="width">150</value>
+                    <value name="height">100%</value>
+                </selector>
+                <selector search=".settingsButton">
+                    <value name="top">160</value>
+                    <value name="left">10</value>
+                    <value name="width">20</value>
+                    <value name="height">80</value>
+                    <value name="background-color">red</value>
+                    <value name="color">#000</value>
+                </selector>
+            </style>
+            <component type="displayContainer" title="scaleData">
+                <args>
+                    <classes>
+                        <class>displayContainer</class>
+                    </classes>
+                    <content show="showScaleData" />
+                </args>
+                <action>
+                    <onLeftDown>LeftDown_onClick</onLeftDown>
+                    <onRightDown>RightDown_onClick</onRightDown>
+                </action>
+            </component>
+            <component type="button" title="settingsButton">
+                <args>
+                    <classes>
+                        <class>settingsButton</class>
+                    </classes>
+                    <content show="getButtonName" />
+                </args>
+                <action>
+                    <onLeftDown>LeftDown_onClick</onLeftDown>
+                    <onRightDown>RightDown_onClick</onRightDown>
+                </action>
+            </component>
+        </children>
+    </component>
+</window>
