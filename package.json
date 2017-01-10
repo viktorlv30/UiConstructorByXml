@@ -1,0 +1,11 @@
+{
+  "name": "ui_constructor",
+  "version": "0.1.0",
+  "description": "constructor of UI components from xml file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "v.litvak",
+  "license": "ISC"
+}
