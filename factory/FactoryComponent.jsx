@@ -58,4 +58,5 @@ class AbstractComponentFactory {
     }
 }
 
+
 export default AbstractComponentFactory;

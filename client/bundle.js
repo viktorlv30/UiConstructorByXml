@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "e07db557c89b6eee39bd"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "3d5d9c19defefd27982b"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -30194,11 +30194,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Component = __webpack_require__(274);
+	var _Component = __webpack_require__(266);
 
 	var _Component2 = _interopRequireDefault(_Component);
 
-	var _registerComponents = __webpack_require__(266);
+	var _registerComponents = __webpack_require__(267);
 
 	var _registerComponents2 = _interopRequireDefault(_registerComponents);
 
@@ -30272,11 +30272,88 @@
 	    value: true
 	});
 
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 	var _react = __webpack_require__(174);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _FactoryComponent = __webpack_require__(273);
+	var _registerComponents = __webpack_require__(267);
+
+	var _registerComponents2 = _interopRequireDefault(_registerComponents);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by v.litvak on 11.01.2017.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+	/**
+	 * Created by v.litvak on 10.01.2017.
+	 */
+
+
+	var Component = function (_React$Component) {
+	    _inherits(Component, _React$Component);
+
+	    function Component(options) {
+	        _classCallCheck(this, Component);
+
+	        var _this = _possibleConstructorReturn(this, (Component.__proto__ || Object.getPrototypeOf(Component)).call(this, options));
+
+	        _this.state = {
+	            children: [(0, _registerComponents2.default)().getInstance('window', { key: 1 }), (0, _registerComponents2.default)().getInstance('container', { key: 2 }), (0, _registerComponents2.default)().getInstance('button', { key: 3 }), (0, _registerComponents2.default)().getInstance('button', { key: 4 })]
+	        };
+	        // console.log(`Window options is: `, options)
+	        return _this;
+	    }
+
+	    _createClass(Component, [{
+	        key: 'renderChildren',
+	        value: function renderChildren() {
+	            return this.state.children.map(function (child) {
+	                return child.render();
+	            });
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                this.renderChildren()
+	            );
+	        }
+	    }]);
+
+	    return Component;
+	}(_react2.default.Component);
+
+	exports.default = Component;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(269); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Component.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
+
+/***/ },
+/* 267 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(174);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _FactoryComponent = __webpack_require__(268);
 
 	var _FactoryComponent2 = _interopRequireDefault(_FactoryComponent);
 
@@ -30294,84 +30371,14 @@
 	    return factory;
 	}
 
-	getFactoryInstance().registerComponent(__webpack_require__(267).default, 'window');
+	getFactoryInstance().registerComponent(__webpack_require__(272).default, 'window');
 	// getFactoryInstance().registerComponent(require('../ui/components/Component').default, 'component');
-	getFactoryInstance().registerComponent(__webpack_require__(268).default, 'container');
-	getFactoryInstance().registerComponent(__webpack_require__(272).default, 'button');
+	getFactoryInstance().registerComponent(__webpack_require__(273).default, 'container');
+	getFactoryInstance().registerComponent(__webpack_require__(274).default, 'button');
 
 	exports.default = getFactoryInstance;
 
 	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(269); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "registerComponents.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
-
-/***/ },
-/* 267 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(174);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by v.litvak on 10.01.2017.
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
-
-
-	//import Factory from '../../factory/FactoryComponent';
-
-	// let factory = new Factory();
-	// const Container = factory.createComponent('container');
-	// const Button = factory.createComponent('button');
-	// console.log(getFactoryInstance);
-	// console.log(getFactoryInstance());
-
-	var Window = function (_React$Component) {
-	    _inherits(Window, _React$Component);
-
-	    function Window(options) {
-	        _classCallCheck(this, Window);
-
-	        var _this = _possibleConstructorReturn(this, (Window.__proto__ || Object.getPrototypeOf(Window)).call(this, options));
-
-	        _this.state = {};
-	        // console.log(`Window options is: `, options)
-	        return _this;
-	    }
-
-	    _createClass(Window, [{
-	        key: "render",
-	        value: function render() {
-
-	            return _react2.default.createElement(
-	                "div",
-	                { className: "window", key: this.props.key },
-	                "THIS IS WINDOW COMPONENT"
-	            );
-	        }
-	    }]);
-
-	    return Window;
-	}(_react2.default.Component);
-
-	exports.default = Window;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(269); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Window.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
 
 /***/ },
@@ -30380,7 +30387,7 @@
 
 	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -30394,47 +30401,78 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by v.litvak on 10.01.2017.
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } } /**
+	                                                                                                                                                           * Created by v.litvak on 10.01.2017.
+	                                                                                                                                                           */
 
 
-	var Container = function (_React$Component) {
-	    _inherits(Container, _React$Component);
+	var AbstractComponentFactoryPrivate = function AbstractComponentFactoryPrivate() {
+	    _classCallCheck(this, AbstractComponentFactoryPrivate);
 
-	    function Container(options) {
-	        _classCallCheck(this, Container);
+	    this.types = {};
+	};
 
-	        var _this = _possibleConstructorReturn(this, (Container.__proto__ || Object.getPrototypeOf(Container)).call(this, options));
+	var privates = new WeakMap();
 
-	        _this.state = {};
-	        // console.log(`Container options is: `, options);
-	        return _this;
+	var AbstractComponentFactory = function () {
+	    function AbstractComponentFactory() {
+	        _classCallCheck(this, AbstractComponentFactory);
+
+	        privates.set(this, new AbstractComponentFactoryPrivate());
 	    }
 
-	    _createClass(Container, [{
-	        key: "render",
-	        value: function render() {
-	            return _react2.default.createElement(
-	                "div",
-	                { className: "displayContainer", key: this.props.key },
-	                "THIS is CONTAINER DIV"
-	            );
+	    _createClass(AbstractComponentFactory, [{
+	        key: 'getComponent',
+	        value: function getComponent(type, options) {
+	            var _this = privates.get(this);
+	            var Component = _this.types[type];
+	            if (Component instanceof Function) {
+	                console.log('Component "' + type + '" was called!');
+	                // return Component.bind(undefined, options);
+	                return function () {
+	                    return _react2.default.createElement(Component, options);
+	                };
+	            } else {
+	                throw new Error('AbstractFactory: No such component type registered');
+	            }
+	        }
+	    }, {
+	        key: 'getInstance',
+	        value: function getInstance(type, options) {
+	            var _this = privates.get(this);
+	            var Component = _this.types[type];
+	            if (Component instanceof Function) {
+	                console.log('Component "' + type + '" was called!');
+	                return new Component(options);
+	            } else {
+	                throw new Error('AbstractFactory: No such component type registered');
+	            }
+	        }
+	    }, {
+	        key: 'registerComponent',
+	        value: function registerComponent(Component, type) {
+	            var _this = privates.get(this);
+	            if (!(Component instanceof Function)) {
+	                throw new Error('AbstractFactory: Component is not a function');
+	            }
+	            if (!(Component.prototype instanceof _react2.default.Component)) {
+	                throw new Error('AbstractFactory: Component is not subclass of React.Component');
+	            }
+	            if (_this.types.hasOwnProperty(type)) {
+	                throw new Error('AbstractFactory: Duplicate type registration');
+	            }
+	            _this.types[type] = Component;
+	            console.log('Component "' + type + '" was registered!');
+	            return this;
 	        }
 	    }]);
 
-	    return Container;
-	}(_react2.default.Component);
+	    return AbstractComponentFactory;
+	}();
 
-	;
+	exports.default = AbstractComponentFactory;
 
-	exports.default = Container;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(269); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Container.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(269); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "FactoryComponent.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
 
 /***/ },
@@ -30593,6 +30631,139 @@
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 
 
+	//import Factory from '../../factory/FactoryComponent';
+
+	// let factory = new Factory();
+	// const Container = factory.createComponent('container');
+	// const Button = factory.createComponent('button');
+	// console.log(getFactoryInstance);
+	// console.log(getFactoryInstance());
+
+	var Window = function (_React$Component) {
+	    _inherits(Window, _React$Component);
+
+	    function Window(options) {
+	        _classCallCheck(this, Window);
+
+	        var _this = _possibleConstructorReturn(this, (Window.__proto__ || Object.getPrototypeOf(Window)).call(this, options));
+
+	        _this.state = {};
+	        // console.log(`Window options is: `, options)
+	        return _this;
+	    }
+
+	    _createClass(Window, [{
+	        key: "render",
+	        value: function render() {
+
+	            return _react2.default.createElement(
+	                "div",
+	                { className: "window", key: this.props.key },
+	                "THIS IS WINDOW COMPONENT"
+	            );
+	        }
+	    }]);
+
+	    return Window;
+	}(_react2.default.Component);
+
+	exports.default = Window;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(269); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Window.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
+
+/***/ },
+/* 273 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(174);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by v.litvak on 10.01.2017.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+	var Container = function (_React$Component) {
+	    _inherits(Container, _React$Component);
+
+	    function Container(options) {
+	        _classCallCheck(this, Container);
+
+	        var _this = _possibleConstructorReturn(this, (Container.__proto__ || Object.getPrototypeOf(Container)).call(this, options));
+
+	        _this.state = {};
+	        // console.log(`Container options is: `, options);
+	        return _this;
+	    }
+
+	    _createClass(Container, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2.default.createElement(
+	                "div",
+	                { className: "displayContainer", key: this.props.key },
+	                "THIS is CONTAINER DIV"
+	            );
+	        }
+	    }]);
+
+	    return Container;
+	}(_react2.default.Component);
+
+	;
+
+	exports.default = Container;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(269); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Container.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
+
+/***/ },
+/* 274 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(174);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by v.litvak on 10.01.2017.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
 	var Button = function (_React$Component) {
 	    _inherits(Button, _React$Component);
 
@@ -30623,177 +30794,6 @@
 	exports.default = Button;
 
 	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(269); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Button.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
-
-/***/ },
-/* 273 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(174);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } } /**
-	                                                                                                                                                           * Created by v.litvak on 10.01.2017.
-	                                                                                                                                                           */
-
-
-	var AbstractComponentFactoryPrivate = function AbstractComponentFactoryPrivate() {
-	    _classCallCheck(this, AbstractComponentFactoryPrivate);
-
-	    this.types = {};
-	};
-
-	var privates = new WeakMap();
-
-	var AbstractComponentFactory = function () {
-	    function AbstractComponentFactory() {
-	        _classCallCheck(this, AbstractComponentFactory);
-
-	        privates.set(this, new AbstractComponentFactoryPrivate());
-	    }
-
-	    _createClass(AbstractComponentFactory, [{
-	        key: 'getComponent',
-	        value: function getComponent(type, options) {
-	            var _this = privates.get(this);
-	            var Component = _this.types[type];
-	            if (Component instanceof Function) {
-	                console.log('Component "' + type + '" was called!');
-	                // return Component.bind(undefined, options);
-	                return function () {
-	                    return _react2.default.createElement(Component, options);
-	                };
-	            } else {
-	                throw new Error('AbstractFactory: No such component type registered');
-	            }
-	        }
-	    }, {
-	        key: 'getInstance',
-	        value: function getInstance(type, options) {
-	            var _this = privates.get(this);
-	            var Component = _this.types[type];
-	            if (Component instanceof Function) {
-	                console.log('Component "' + type + '" was called!');
-	                return new Component(options);
-	            } else {
-	                throw new Error('AbstractFactory: No such component type registered');
-	            }
-	        }
-	    }, {
-	        key: 'registerComponent',
-	        value: function registerComponent(Component, type) {
-	            var _this = privates.get(this);
-	            if (!(Component instanceof Function)) {
-	                throw new Error('AbstractFactory: Component is not a function');
-	            }
-	            if (!(Component.prototype instanceof _react2.default.Component)) {
-	                throw new Error('AbstractFactory: Component is not subclass of React.Component');
-	            }
-	            if (_this.types.hasOwnProperty(type)) {
-	                throw new Error('AbstractFactory: Duplicate type registration');
-	            }
-	            _this.types[type] = Component;
-	            console.log('Component "' + type + '" was registered!');
-	            return this;
-	        }
-	    }]);
-
-	    return AbstractComponentFactory;
-	}();
-
-	exports.default = AbstractComponentFactory;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(269); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "FactoryComponent.jsx" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
-
-/***/ },
-/* 274 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(79), RootInstanceProvider = __webpack_require__(87), ReactMount = __webpack_require__(89), React = __webpack_require__(174); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(174);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _registerComponents = __webpack_require__(266);
-
-	var _registerComponents2 = _interopRequireDefault(_registerComponents);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by v.litvak on 11.01.2017.
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
-	/**
-	 * Created by v.litvak on 10.01.2017.
-	 */
-
-
-	var Component = function (_React$Component) {
-	    _inherits(Component, _React$Component);
-
-	    function Component(options) {
-	        _classCallCheck(this, Component);
-
-	        var _this = _possibleConstructorReturn(this, (Component.__proto__ || Object.getPrototypeOf(Component)).call(this, options));
-
-	        _this.state = {
-	            children: [(0, _registerComponents2.default)().getInstance('window', { key: 1 }), (0, _registerComponents2.default)().getInstance('container', { key: 2 }), (0, _registerComponents2.default)().getInstance('button', { key: 3 }), (0, _registerComponents2.default)().getInstance('button', { key: 4 })]
-	        };
-	        // console.log(`Window options is: `, options)
-	        return _this;
-	    }
-
-	    _createClass(Component, [{
-	        key: 'renderChildren',
-	        value: function renderChildren() {
-	            return this.state.children.map(function (child) {
-	                return child.render();
-	            });
-	        }
-	    }, {
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                this.renderChildren()
-	            );
-	        }
-	    }]);
-
-	    return Component;
-	}(_react2.default.Component);
-
-	exports.default = Component;
-
-	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(269); if (makeExportsHot(module, __webpack_require__(174))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot apply hot update to " + "Component.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
 
 /***/ }
