@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/UiConstructorByXml.iml" filepath="$PROJECT_DIR$/.idea/UiConstructorByXml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/UiConstructorByXml_ReactAbstractFactory.iml" filepath="$PROJECT_DIR$/.idea/UiConstructorByXml_ReactAbstractFactory.iml" />
     </modules>
   </component>
 </project>

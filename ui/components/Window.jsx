@@ -2,22 +2,34 @@
  * Created by v.litvak on 10.01.2017.
  */
 import React from 'react';
-// import Container from './Container';
-// import Button from './Button';
-import Factory from '../../factory/FactoryComponent';
 
-let factory = new Factory();
-const Container = factory.createComponent('container');
-const Button = factory.createComponent('button');
+//import Factory from '../../factory/FactoryComponent';
 
-export default React.createClass({
-    render: function () {
+// let factory = new Factory();
+// const Container = factory.createComponent('container');
+// const Button = factory.createComponent('button');
+// console.log(getFactoryInstance);
+// console.log(getFactoryInstance());
+
+class Window extends React.Component{
+    constructor(options) {
+        super(options);
+        this.state = {};
+        // console.log(`Window options is: `, options)
+    }
+
+    render () {
+        // let Container = getFactoryInstance().getComponent('container', {container: 'first container'});
+        // let Button = getFactoryInstance().getComponent('button', {button: 'some first button'});
+
         return(
-            <div>
+            <div className="window" key={this.props.key}>
                 THIS IS WINDOW COMPONENT
-                <Container />
-                <Button />
+                {/*<Container />*/}
+                {/*<Button />*/}
             </div>
         );
     }
-});
+}
+
+export default Window;

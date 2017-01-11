@@ -7,4 +7,31 @@
 	width: 800px;
 	height: 600px;
 	background-color: lightgreen;
+	position: absolute;
+	border-radius: 10px;
+	border: 1px solid #070707;
+	text-align: center;
+}
+
+.window{
+	height: 100%;
+	width: 100%;
+	position: relative;
+	margin-top: 20px;
+}
+
+.settingsButton{
+	height: 60px;
+	width: 150px;
+	top: 150px;
+	background-color: lightsalmon;
+	margin: 10px;
+}
+
+.displayContainer{
+	height: 120px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: yellow;
 }

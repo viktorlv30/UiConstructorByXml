@@ -3,10 +3,19 @@
  */
 import React from 'react';
 
-export default React.createClass({
-    render: function () {
+class Button extends React.Component{
+
+    constructor(options) {
+        super(options);
+        this.state = {};
+        // console.log(`Button options is: `, options);
+    }
+
+    render() {
         return(
-            <div>This is a BUTTON DIV</div>
+            <button className="settingsButton" key={this.props.key}>This is a BUTTON</button>
         );
     }
-});
+}
+
+export default Button;
